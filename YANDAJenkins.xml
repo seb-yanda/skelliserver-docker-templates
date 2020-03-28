@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>YANDA-Jenkins</Name>
+  <Repository>yandasoftware/docker-laravel-jenkins</Repository>
+  <Registry>https://hub.docker.com/r/yandasoftware/yanda-jenkins</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Project>https://jenkins.io/</Project>
+  <Overview>This container will download and install Jenkins and all the necessary libraries for automatically building and testing PHP and NodeJS based applications.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8090]</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://yanda.agency/img/icons/favicon-32x32.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please</DonateText>
+  <DonateLink>https://www.paypal.me/seb_grant</DonateLink>
+  <Overview>This container will download and install Jenkins and all the necessary libraries for automatically building and testing PHP and NodeJS based applications.</Overview>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8090</HostPort>
+        <ContainerPort>8090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>50000</HostPort>
+        <ContainerPort>50000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/jenkins</HostDir>
+      <ContainerDir>/jenkins</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>latest</Value>
+      <Name>JENKINS_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>http://mirror.esuni.jp</Value>
+      <Name>JENKINS_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EXTRA_JENKINS_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EXTRA_JVM_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>uid</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>gid</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>basicjre</Value>
+      <Name>RUNTIME_NAME</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Webport" Target="8090" Default="" Mode="tcp" Description="Container Port: 8090" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="Appdata Path" Target="/jenkins" Default="" Mode="rw" Description="Container Path: /jenkins" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/jenkins</Config>
+  <Config Name="Jenkins Version" Target="JENKINS_V" Default="" Mode="" Description="Enter the version wich you want to download or set to 'latest' (without quotes) to download the latest version and check on every restart if there is a newer version." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Jenkins Download URL" Target="JENKINS_URL" Default="" Mode="" Description="Mirror from wich to download jenkins you can get them from here: http://mirrors.jenkins-ci.org/status.html." Type="Variable" Display="always" Required="true" Mask="false">ftp://mirror.serverion.com</Config>
+  <Config Name="Extra Jenkins Startup Paramaters" Target="EXTRA_JENKINS_PARAMS" Default="" Mode="" Description="Enter extra Jenkins startup parameters if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Extra JVM Startup Parameters" Target="EXTRA_JVM_PARAMS" Default="" Mode="" Description="Enter extra JVM start parameters if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+  <Config Name="Host Key 1" Target="uid" Default="" Mode="" Description="Container Variable: uid" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="Host Key 2" Target="gid" Default="" Mode="" Description="Container Variable: gid" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="The name of the runtime (only change if you know what you are doing)." Type="Variable" Display="advanced" Required="true" Mask="false">basicjre</Config>
+</Container>
