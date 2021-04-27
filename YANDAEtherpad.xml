@@ -39,7 +39,7 @@
   </Data>
   <Environment>
     <Variable>
-      <Value></Value>
+      <Value>YANDA Collaborative Documents</Value>
       <Name>TITLE</Name>
       <Mode/>
     </Variable>
@@ -49,7 +49,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>9001</Value>
       <Name>PORT</Name>
       <Mode/>
     </Variable>
@@ -90,6 +90,10 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Port" Target="9001" Default="" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="PORT" Target="9001" Default="" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="ADMIN_PASSWORD" Target="" Default="" Mode="tcp" Description="" Display="always" Required="true"/>
+  <Config Name="USER_PASSWORD" Target="" Default="" Mode="tcp" Description="" Display="always" Required="true"/>
+  <Config Name="DB_USER" Target="" Default="" Mode="tcp" Description="" Display="always" Required="true"/>
+  <Config Name="DB_PASS" Target="" Default="" Mode="tcp" Description="" Display="always" Required="true"/>
   
 </Container>
