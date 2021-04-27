@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>YANDA-WBO</Name>
+  <Repository>lovasoa/wbo:latest</Repository>
+  <Registry>https://hub.docker.com/r/yandasoftware/yanda-wbo</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Project>https://wbo.ophir.dev/</Project>
+  <Overview>This container will download and install WBO. WBO is an online collaborative whiteboard that is simple, easy to use and open-source.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:9090]</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://yanda.agency/img/icons/favicon-32x32.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please</DonateText>
+  <DonateLink>https://www.paypal.me/seb_grant</DonateLink>
+  <Overview>This container will download and install Jenkins and all the necessary libraries for automatically building and testing PHP and NodeJS based applications.</Overview>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/wbo</HostDir>
+      <ContainerDir>/opt/app/server-data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Labels/>
+  <Config Name="Webport" Target="9090" Default="" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
+  <Config Name="Appdata Path" Target="/opt/app/serverdata" Default="" Mode="rw" Description="Container Path: /opt/app/server-data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wbo</Config>
+</Container>
