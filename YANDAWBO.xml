@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>YANDA-WBO</Name>
   <Repository>lovasoa/wbo:latest</Repository>
-  <Registry>https://hub.docker.com/r/yandasoftware/yanda-wbo</Registry>
+  <Registry>https://hub.docker.com/r/lovasoa/wbo</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -19,7 +19,6 @@
   <DateInstalled/>
   <DonateText>If you like my work please</DonateText>
   <DonateLink>https://www.paypal.me/seb_grant</DonateLink>
-  <Overview>This container will download and install Jenkins and all the necessary libraries for automatically building and testing PHP and NodeJS based applications.</Overview>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
