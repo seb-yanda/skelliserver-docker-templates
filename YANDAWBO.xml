@@ -38,5 +38,5 @@
   </Data>
   <Labels/>
   <Config Name="Webport" Target="9090" Default="" Mode="tcp" Description="Container Port: 9090" Type="Port" Display="always" Required="true" Mask="false">9090</Config>
-  <Config Name="Appdata Path" Target="/opt/app/serverdata" Default="" Mode="rw" Description="Container Path: /opt/app/server-data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wbo</Config>
+  <Config Name="Appdata Path" Target="/opt/app/server-data" Default="" Mode="rw" Description="Container Path: /opt/app/server-data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wbo</Config>
 </Container>
