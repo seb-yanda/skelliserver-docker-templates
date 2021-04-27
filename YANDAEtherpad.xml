@@ -93,8 +93,8 @@
   <Config Name="Webport" Target="9001" Default="" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
   <Config Name="Admin Password" Target="ADMIN_PASSWORD" Default="" Mode="" Type="Variable" Description="" Display="always" Required="true"/>
   <Config Name="User password" Target="USER_PASSWORD" Default="" Mode="" Type="Variable" Description="" Display="always" Required="true"/>
-  <Config Name="Database Type" Target="DB_TYPE" Type="Variable" Display="never">MySQL</Config>
-  <Config Name="Database Host" Target="DB_HOST" Type="Variable" Display="never">localhost</Config>
+  <Config Name="Database Type" Target="DB_TYPE" Default="MySQL" Type="Variable" Display="advanced">MySQL</Config>
+  <Config Name="Database Host" Target="DB_HOST" Default="localhost" Type="Variable" Display="advanced">localhost</Config>
   <Config Name="MySQL Database User" Target="DB_USER" Default="" Mode="" Type="Variable" Description="" Display="always" Required="true"/>
   <Config Name="MySQL Database Password" Target="DB_PASS" Default="" Mode="" Type="Variable" Description="" Display="always" Required="true"/>
   
