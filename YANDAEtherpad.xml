@@ -30,13 +30,6 @@
       </Port>
     </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/jenkins</HostDir>
-      <ContainerDir>/jenkins</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
   <Environment>
     <Variable>
       <Value>YANDA Collaborative Documents</Value>
@@ -88,15 +81,21 @@
       <Name>DB_PASS</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>adminpads2 headings2 workspaces</Value>
+      <Name>ETHERPAD_PLUGINS</Value>
+      <Mode>rw</Mode>
   </Environment>
   <Labels/>
-  <Config Name="Webport" Target="9001" Default="" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="Web Port" Target="9001" Default="9001" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
   <Config Name="Admin Password" Target="ADMIN_PASSWORD" Default="" Mode="" Type="Variable" Description="" Display="always" Required="true"/>
   <Config Name="User password" Target="USER_PASSWORD" Default="" Mode="" Type="Variable" Description="" Display="always" Required="true"/>
   <Config Name="Database Type" Target="DB_TYPE" Default="mysql" Type="Variable" Display="advanced">mysql</Config>
   <Config Name="Database Host" Target="DB_HOST" Default="localhost" Type="Variable" Display="advanced">localhost</Config>
-  <Config Name="Database Name" Target="DB_NAME" Default="localhost" Type="Variable" Display="always">etherpad</Config>
-  <Config Name="MySQL Database User" Target="DB_USER" Default="" Mode="" Type="Variable" Description="" Display="always" Required="true"/>
-  <Config Name="MySQL Database Password" Target="DB_PASS" Default="" Mode="" Type="Variable" Description="" Display="always" Required="true"/>
+  <Config Name="Database Name" Target="DB_NAME" Default="localhost" Type="Variable" Display="advanced">etherpad</Config>
+  <Config Name="Database User" Target="DB_USER" Default="" Mode="" Type="Variable" Display="advanced" Required="true"/>
+  <Config Name="Database Password" Target="DB_PASS" Default="" Mode="" Type="Variable" Display="always" Required="true"/>
+  <Config Name="App Title" Target="TITLE" Default="Etherpad" Display="advanced" Description="Default: Etherpad" Required="false">YANDA Collaborative Notes</Config>
+  <Config Name="Included Plugins" Target="ETHERPAD_PLUGINS" Display="always" Required="false">adminpads2 headings2 workspaces</Config>
   
 </Container>
