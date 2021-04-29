@@ -85,6 +85,7 @@
       <Value>adminpads2 headings2 workspaces</Value>
       <Name>ETHERPAD_PLUGINS</Name>
       <Mode>rw</Mode>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Web Port" Target="9001" Default="9001" Mode="tcp" Description="Container Port: 9001" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
