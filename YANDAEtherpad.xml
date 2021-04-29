@@ -83,7 +83,7 @@
     </Variable>
     <Variable>
       <Value>adminpads2 headings2 workspaces</Value>
-      <Name>ETHERPAD_PLUGINS</Value>
+      <Name>ETHERPAD_PLUGINS</Name>
       <Mode>rw</Mode>
   </Environment>
   <Labels/>
