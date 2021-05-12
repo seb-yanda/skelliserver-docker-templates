@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>YANDA-Etherpad</Name>
-  <Repository>etherpad/etherpad</Repository>
-  <Registry>https://hub.docker.com/r/yandasoftware/yanda-etherpad</Registry>
+  <Name>Etherpad</Name>
+  <Repository>yandasoftware/etherpad</Repository>
+  <Registry>https://hub.docker.com/r/yandasoftware/etherpad</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -97,7 +97,5 @@
   <Config Name="Database Name" Target="DB_NAME" Default="localhost" Type="Variable" Display="advanced">etherpad</Config>
   <Config Name="Database User" Target="DB_USER" Default="" Mode="" Type="Variable" Display="advanced" Required="true"/>
   <Config Name="Database Password" Target="DB_PASS" Default="" Mode="" Type="Variable" Display="advanced" Required="true"/>
-  <Config Name="App Title" Target="TITLE" Default="Etherpad" Display="advanced" Description="Default: Etherpad" Required="false">YANDA Collaborative Notes</Config>
-  <Config Name="Included Plugins" Target="ETHERPAD_PLUGINS" Display="always" Required="false">adminpads2 headings2 workspaces</Config>
-  
+  <Config Name="App Title" Target="TITLE" Default="Etherpad" Display="advanced" Description="Default: Etherpad" Required="false">YANDA Collaborative Notes</Config>  
 </Container>
